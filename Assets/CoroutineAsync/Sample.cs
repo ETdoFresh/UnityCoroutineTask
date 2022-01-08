@@ -11,10 +11,10 @@ namespace CoroutineAsync
         
         IEnumerator Start()
         {
-            textUi.text = "";
+            textUi.text = "{Press R to Restart}";
             
             yield return CoroutineTask.Delay(1000);
-            textUi.text += "You just waited 1 second...";
+            textUi.text += "\nYou just waited 1 second...";
 
             yield return CoroutineTask.Run(WaitOneSecond());
             textUi.text += "\nYou just waited another second...";
